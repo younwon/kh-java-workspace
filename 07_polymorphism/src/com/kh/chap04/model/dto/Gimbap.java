@@ -1,13 +1,13 @@
 package com.kh.chap04.model.dto;
 
-public class gimbap {
+public class Gimbap {
 	private String nameString;
 	private String mainMenuString;
 	private int price;
-	public gimbap() {
+	public Gimbap() {
 		super();
 	}
-	public gimbap(String nameString, String mainMenuString, int price) {
+	public Gimbap(String nameString, String mainMenuString, int price) {
 		super();
 		this.nameString = nameString;
 		this.mainMenuString = mainMenuString;
