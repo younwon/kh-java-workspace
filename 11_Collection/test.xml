@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>2026-10-20 박윤원 이건 properties 파일임</comment>
+<entry key="list">ArrayList</entry>
+<entry key="Map">HashMao</entry>
+</properties>
