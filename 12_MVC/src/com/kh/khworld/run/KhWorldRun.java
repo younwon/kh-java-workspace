@@ -1,12 +1,15 @@
 package com.kh.khworld.run;
 
+import com.kh.khworld.view.GiftShopView;
 import com.kh.khworld.view.KhWorldView;
 
 public class KhWorldRun {
 
 	public static void main(String[] args) {
 		
-		new KhWorldView().mainMenu();
+		//new KhWorldView().mainMenu();
+		new GiftShopView().mainMenu();
+
 	}
 	// MVC
 	// Model : 데이터담당
