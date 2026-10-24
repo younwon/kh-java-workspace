@@ -22,18 +22,34 @@ public class GiftShopService {
     }
 
     public void addGiftShop(GiftShop giftShop) {
+        try{
+            checkName(giftShop.getName());
+        } catch (DuplicateNameException e) {
+            System.out.println(e.getMessage());
+        }
         checkName(giftShop.getName());
 
         giftShopList.add(giftShop);
 
     }
 
-    public void deleteGiftShop() {
-
+    public void deleteGiftShop(String name) {
+        for (int i = 0; i < giftShopList.size(); i++) {
+            if (name.equals(giftShopList.get(i).getName())){
+                giftShopList.remove(i);
+                break;
+            }
+        }
     }
 
-    public void findGiftShop() {
-
+    public List<String> findGiftShop(String keyword) {
+        List<String> keywordList = new ArrayList<>();
+        for (GiftShop giftShop : giftShopList) {
+            if (giftShop.getName().contains(keyword)) {
+                keywordList.add(giftShop.getName());
+            }
+        }
+        return keywordList;
     }
 
     private void checkName(String name){

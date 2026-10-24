@@ -18,9 +18,12 @@ public class GiftShopController {
 
     }
 
-    public void deleteGiftShop() {
+    public void deleteGiftShop(String name) {
+        gss.deleteGiftShop(name);
     }
 
-    public void findGiftShop() {
+    public String findGiftShop(String keyword) {
+        String s = gss.findGiftShop(keyword).toString();
+        return s;
     }
 }

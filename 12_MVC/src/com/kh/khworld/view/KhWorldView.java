@@ -50,6 +50,8 @@ public class KhWorldView {
 	}
 	
 	private void readAttractions() {
+
+
 		List<Attraction> list = kwc.readAttractions();
 		
 		if (!list.isEmpty()) {
