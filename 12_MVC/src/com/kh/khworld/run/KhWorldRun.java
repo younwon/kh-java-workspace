@@ -2,13 +2,15 @@ package com.kh.khworld.run;
 
 import com.kh.khworld.view.GiftShopView;
 import com.kh.khworld.view.KhWorldView;
+import com.kh.khworld.view.RestaurantView;
 
 public class KhWorldRun {
 
 	public static void main(String[] args) {
 		
 		//new KhWorldView().mainMenu();
-		new GiftShopView().mainMenu();
+		//new GiftShopView().mainMenu();
+		new RestaurantView().mainMenu();
 
 	}
 	// MVC
