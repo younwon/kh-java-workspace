@@ -1,8 +1,12 @@
 package com.kh.exercises.model.service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import javax.naming.NameNotFoundException;
+
+import com.kh.exercises.NotFoundException;
 import com.kh.exercises.model.dto.Exercise;
 
 public class ExerciseService {
@@ -16,28 +20,46 @@ public class ExerciseService {
 		exercises.add(new Exercise("Bicep curl", 12, 15, "Arms"));
 	}
 	
-	public void readExercise() {
+	public List<Exercise> readExercise() {
+		return new ArrayList<Exercise>(exercises);
+	}
+	
+	public void save(Exercise exercise) {
+		exercises.add(exercise);
+	}
+	
+	public void delete(String name)  {
+		for (int i = 0; i < exercises.size(); i++) {
+			if (name.equals(exercises.get(i).getExerciseName())) {
+				exercises.remove(i);
+				return;
+			}
+		}
+		throw new NotFoundException("해당하는 기록이 없습니다");
 		
 	}
 	
-	public void save() {
-		
+	public List<Exercise> findByTarget(String name) {
+		List<Exercise> list = exercises.stream().filter(s -> s.getExerciseName().equals(name)).toList();
+		return list;
 	}
 	
-	public void delete() {
-		
+	public void updateReps(String name, int reps) {
+		for (Exercise exercise : exercises) {
+			if (name.equals(exercise.getExerciseName())) {
+				exercise.setReps(reps);
+				return;
+			}
+		}
+		throw new NotFoundException("해당하는 기록이 없습니다");
 	}
 	
-	public void findByTarget() {
-		
-	}
-	
-	public void updateReps() {
-		
-	}
-	
-	public void totalReps() {
-		
+	public int totalWeight() {
+		int sum = 0;
+		for (Exercise exercise : exercises) {
+			sum += exercise.getWeight();
+		}
+		return sum;
 	}
 	
 	public void clearHistory() {

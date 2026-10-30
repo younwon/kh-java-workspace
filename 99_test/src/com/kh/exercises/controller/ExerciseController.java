@@ -25,7 +25,7 @@ public class ExerciseController {
 		
 	}
 	
-	public void totalReps() {
+	public void totalWeight() {
 		
 	}
 	

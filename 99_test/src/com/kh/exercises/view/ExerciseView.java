@@ -18,7 +18,7 @@ public class ExerciseView {
 			System.out.println("3. 운동 기록 삭제하기");
 			System.out.println("4. 부위 검색하기");
 			System.out.println("5. 횟구 변경하기");
-			System.out.println("6. 총 횟수");
+			System.out.println("6. 총 무게");
 			System.out.println("7. 기록 초기화");
 			System.out.println("0. 프로그램 종료하기");
 			System.out.println();
@@ -69,7 +69,7 @@ public class ExerciseView {
 		
 	}
 	
-	private void totalReps() {
+	private void totalWeight() {
 		
 	}
 	
